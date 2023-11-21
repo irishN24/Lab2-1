@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    int N;
+    int rez = scanf_s("%d", &N);
+    int V = 0;
+    int OST;
+    if (rez == 1)
+    {
+        while (N != 0)
+        {
+            OST = N % 10;
+            V = V * 10 + OST;
+            N = N / 10;
+        }
+        if (V < 0) 
+        {
+            printf("OVERFLOW!");
+        }
+        else
+        {
+            printf("%d", V);
+        }
+        
+    }
+    else
+    {
+        printf("WRONG DATA!");
+    }
+   
+    
+    return 0;
+}
