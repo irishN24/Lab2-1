@@ -3,7 +3,8 @@
 int main()
 {
     long long int N;
-    int rez = scanf_s("%lld", &N);
+    printf("Input N: \n");
+    int rez = scanf("%lld", &N);
     long long int V = 0;
     int OST;
     if (rez == 1 && N < 2147483637)
