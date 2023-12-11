@@ -2,26 +2,30 @@
 
 int main()
 {
-    long long int N;
-    printf("Input N: \n");
-    int rez = scanf("%lld", &N);
-    long long int V = 0;
-    int OST;
-    if (rez == 1 && N < 2147483637)
+    int N;
+    int rez = scanf_s("%d", &N);
+    int V = 0;
+    int OST = 0;
+    if (rez == 1)
     {
         while (N != 0)
         {
             OST = N % 10;
             V = V * 10 + OST;
             N = N / 10;
+
         }
-        
-            printf("%lld", V);
-        
+        if (V >= 0) 
+        {
+            printf("%d", V);           
+        }
+        else {
+            printf("Overflow");
+        }
     }
     else
     {
-        printf("WRONG DATA OR OVERFLOW!");
+        printf("WRONG DATA");
     }
    
     
