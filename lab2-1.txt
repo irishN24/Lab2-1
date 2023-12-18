@@ -7,26 +7,29 @@ int main()
     int OST = 0;
     if (rez == 1)
     {
-        if (N < 10 || N > 214747412)
-        {
-            printf("Overflow");
-        }
-        else{
-        while (N != 0)
-        {
-            OST = N % 10;
-            V = V * 10 + OST;
-            N = N / 10;
-        }
-        printf("%d", V);
-        }
         
+            while (N != 0)
+            {
+                OST = N % 10;
+                V = V * 10 + OST;
+                if (V < 0)
+                {
+                    N = 0;
+                    printf("ERROR");
+                }
+                N = N / 10; 
+                
+            }
+            if (V >= 0) {
+            printf("%d", V);
+            }
+
     }
     else
     {
         printf("WRONG DATA");
     }
-   
-    
+
+
     return 0;
 }
