@@ -28,12 +28,7 @@ int main()
         if (N2 == 0){
             V = V * (-1); 
         }
-            if (V != 0) {
-                printf("%d", V);
-            }
-            else{
-                printf("0");
-            }
+        printf("%d", V);
 
     }
     else
